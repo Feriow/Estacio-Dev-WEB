@@ -1,0 +1,15 @@
+#texto_apresentacao {
+  font-size: 16px;
+}
+
+.texto_descricao {
+  font-size: 12px;
+}
+
+.texto_vermelho {
+  color: red;
+}
+
+.css_externa {
+  background-color: lightpink;
+}

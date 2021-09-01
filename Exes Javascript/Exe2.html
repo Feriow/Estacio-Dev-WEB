@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript - Exercício 2</title>
+  </head>
+  <body></body>
+
+  <script type="text/javascript">
+    var numeros = [];
+    var contador = 0;
+    var entradaCorreta;
+
+    numeros[contador] = solicitaNumero();
+    numeros[contador] = solicitaNumero();
+
+    var resultado = divida(numeros);
+
+    alert("O resultado da divisão é igual a: " + resultado);
+
+    function solicitaNumero() {
+      var numero = prompt(`Insira o ${contador + 1}º número: `);
+      if (numero <= 0) {
+        alert("O numero precisa ser inteiro e positivo");
+        return solicitaNumero();
+      } else {
+        contador++;
+        return numero;
+      }
+    }
+
+    function divida(numeros) {
+      return numeros[0] / numeros[1];
+    }
+  </script>
+</html>

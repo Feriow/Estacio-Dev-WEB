@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudoclasses CSS</title>
+    <style>
+      dl {
+        background-color: lightblue;
+      }
+      dt {
+        background-color: rgb(135, 212, 238);
+        font-weight: bold;
+      }
+      a:active {
+        color: red;
+      }
+
+      input:checked + label {
+        color: red;
+      }
+
+      li:first-child {
+        color: blue;
+      }
+      li:last-child {
+        color: red;
+      }
+
+      .classes p:hover {
+        color: green;
+      }
+
+      .elementos .elem::before {
+        content: "antes----";
+      }
+      .elementos .elem::after {
+        content: "----depois";
+      }
+
+      .elementos .elem2::first-letter {
+        font-size: 1.5em;
+        color: red;
+      }
+      .elementos .elem2::first-line {
+        background-color: lightgreen;
+      }
+
+      .elementos .elem3::selection {
+        background-color: lightcoral;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="classes">
+      <h1>Pseudoclasses</h1>
+      <p>
+        As pseudoclasses são utilizadas para definir um estado especial de um
+        elemento. Por exemplo: podemos mudar o estilo de um elemento ao
+        passarmos o mouse sobre ele (evento mouseover). Esse novo estilo é
+        temporário, ou seja, não corresponde ao seu estado natural. Também
+        podemos mudar o estilo de um link que foi clicado, alterando sua cor ou
+        alguma outra propriedade. A sintaxe para declaração da pseudoclasse é
+        composta pela palavra-chave correspondente ao nome da pseudoclasse
+        precedido pelo sinal de dois pontos.
+      </p>
+
+      <h2>:active</h2>
+      <dl>
+        <dt>Como declarar = a:active</dt>
+        <dd>Selecionar todos os links ativos (segurando o clique).</dd>
+        <dd>
+          <a href="#">Teste1</a>
+          <a href="#">Teste2</a>
+          <a href="#">Teste3</a>
+        </dd>
+      </dl>
+
+      <h2>:checked</h2>
+      <dl>
+        <dt>Como declarar = input:checked</dt>
+        <dd>Selecionar todos os campos input checados.</dd>
+        <dd>
+          <input type="checkbox" name="1" id="1" />
+          <label for="1">Teste 1</label>
+          <input type="checkbox" name="2" id="2" />
+          <label for="2">Teste 2</label>
+          <input type="checkbox" name="3" id="3" />
+          <label for="3">Teste 3</label>
+        </dd>
+      </dl>
+
+      <h2>:first-child and :last-child</h2>
+      <dl>
+        <dt>Como declarar = li:first-child ou li:first-child</dt>
+        <dd>Selecionar todo o primeiro/último item de lista.</dd>
+        <dd>
+          <ul>
+            <li>Primeiro item</li>
+            <li>Segundo item</li>
+            <li>Último item</li>
+          </ul>
+        </dd>
+      </dl>
+
+      <h2>:hover</h2>
+      <dl>
+        <dt>Como declarar = p:hover</dt>
+        <dd>Selecionar todas as divs no evento mouseover.</dd>
+        <dd>
+          <p>Teste 1</p>
+          <p>Teste 2</p>
+          <p>Teste 3</p>
+        </dd>
+      </dl>
+    </div>
+
+    <div class="elementos">
+      <h1>Pseudo-elementos</h1>
+      <p>
+        Os pseudo-elementos são palavras-chave que, adicionadas/relacionadas a
+        um seletor, permitem que uma parte específica dele seja estilizada.
+        Cabe, ainda, destacar um outro ponto do exemplo relacionado à sintaxe
+        dos pseudo-elementos: neles são usados dois pontos duplos (ou dobrados)
+        para a declaração. Isso é proposital, para diferenciá-los das
+        pseudoclasses.
+      </p>
+
+      <h2>::before e ::after</h2>
+      <dl>
+        <dt>Como declarar = .elem::before ou .elem::after</dt>
+        <dd>Inserir conteúdo antes/após do elemento indicado.</dd>
+        <dd>
+          <p class="elem">Elemento parágrafo</p>
+        </dd>
+      </dl>
+
+      <h2>::first-letter e ::first-line</h2>
+      <dl>
+        <dt>Como declarar = .elem2::first-letter ou .elem2::first-line</dt>
+        <dd>Selecionar a primeira letra/linha do elemento indicado.</dd>
+        <dd>
+          <p class="elem2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
+            amet accumsan erat. Praesent pulvinar auctor ex. Sed eu scelerisque
+            neque, et ultricies est. Pellentesque lacus est, imperdiet eget
+            pulvinar at, molestie lobortis massa. Phasellus sit amet velit in
+            enim rutrum maximus. Donec ut imperdiet justo. Nunc condimentum,
+            justo ac mollis congue, ex orci scelerisque nulla, ut pellentesque
+            massa lorem et sem. Duis eu nisi elit. Praesent nibh nulla, laoreet
+            eu gravida in, sodales non tellus. Nullam eget erat et diam eleifend
+            mollis ut quis sem. Quisque ipsum nunc, tincidunt et dui non,
+            convallis iaculis tellus. Morbi nec felis eu lorem ullamcorper
+            maximus id non nisl.
+          </p>
+        </dd>
+      </dl>
+
+      <h2>::selection</h2>
+      <dl>
+        <dt>Como declarar = elem3::selection</dt>
+        <dd>
+          Seleciona a porção de um elemento que é selecionado pelo usuário.
+          (Selecione parte do texto)
+        </dd>
+        <dd>
+          <p class="elem3">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit
+            amet accumsan erat. Praesent pulvinar auctor ex. Sed eu scelerisque
+            neque, et ultricies est. Pellentesque lacus est, imperdiet eget
+            pulvinar at, molestie lobortis massa. Phasellus sit amet velit in
+            enim rutrum maximus. Donec ut imperdiet justo. Nunc condimentum,
+            justo ac mollis congue, ex orci scelerisque nulla, ut pellentesque
+            massa lorem et sem. Duis eu nisi elit. Praesent nibh nulla, laoreet
+            eu gravida in, sodales non tellus. Nullam eget erat et diam eleifend
+            mollis ut quis sem. Quisque ipsum nunc, tincidunt et dui non,
+            convallis iaculis tellus. Morbi nec felis eu lorem ullamcorper
+            maximus id non nisl.
+          </p>
+        </dd>
+      </dl>
+    </div>
+  </body>
+</html>

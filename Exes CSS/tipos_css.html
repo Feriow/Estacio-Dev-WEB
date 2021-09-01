@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inserindo CSS</title>
+    <link rel="stylesheet" href="Exe_CSS.css" />
+    <style>
+      .css_interna {
+        background-color: aquamarine;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Modos de inserir CSS no HTML:</h1>
+
+    <h2>CSS inline:</h2>
+    <p style="background-color: lightblue">CSS Inline</p>
+    Essa forma implica em declarar o estilo CSS diretamente na tag, no código
+    HTML. A declaração Inline faz uso do atributo “style” procedido por
+    declarações separadas por ponto-e-vírgula “;”. Esse atributo pode ser usado
+    em qualquer tag HTML.
+
+    <h2>CSS interna:</h2>
+    <p class="css_interna">CSS Interna</p>
+    Também chamada de CSS Incorporada, é declarada na seção head do documento
+    HTML. A declaração Inline faz uso do atributo “style” procedido por
+    declarações separadas por ponto-e-vírgula “;”. Esse atributo pode ser usado
+    em qualquer tag HTML.
+
+    <h2>CSS Externa</h2>
+    <p class="css_externa">CSS Externa</p>
+    Nesse caso, os estilos são declarados em um arquivo externo, com extensão
+    “.css” e vinculados ao documento HTML por meio da tag link ou da diretiva
+    @import dentro da tag head.
+
+    <h2>CSS em Escopo</h2>
+    <div>
+      <style>
+        p {
+          background-color: lightsalmon;
+        }
+      </style>
+      <p>CSS em Escopo</p>
+      Essa forma de aplicação de estilo foi criada a partir da HTML5. Com ela, é
+      possível aplicar estilos no âmbito de escopo, ou seja, específicos para as
+      seções da página onde foram declarados, incluindo os seus elementos
+      filhos. No código abaixo, a tag preceberá os estilos definidos, sendo a
+      mesma regra válida para outros estilos e elementos que, porventura, venham
+      a fazer parte da div.
+    </div>
+  </body>
+</html>

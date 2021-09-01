@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <title>Javascript - Exercício 1</title>
+  </head>
+  <body></body>
+
+  <script type="text/javascript">
+    var entrada1;
+    var entrada2;
+
+    entrada1 = prompt("Insira o numerador: ");
+    entrada2 = prompt("Insira o denominador: ");
+    divisao(entrada1, entrada2);
+
+    function divisao(x, y) {
+      if (y != 0) {
+        alert("O resultado da divisão é igual a: " + x / y);
+      } else {
+        alert("Não é possível dividir por zero. Reinicie");
+      }
+    }
+  </script>
+</html>
